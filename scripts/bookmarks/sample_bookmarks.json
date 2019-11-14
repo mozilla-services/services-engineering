@@ -1,0 +1,208 @@
+{
+  "guid": "root________",
+  "title": "",
+  "index": 0,
+  "dateAdded": 1573749792181000,
+  "lastModified": 1573768207519000,
+  "id": 1,
+  "typeCode": 2,
+  "type": "text/x-moz-place-container",
+  "root": "placesRoot",
+  "children": [
+    {
+      "guid": "menu________",
+      "title": "menu",
+      "index": 0,
+      "dateAdded": 1573749792181000,
+      "lastModified": 1573749792290000,
+      "id": 2,
+      "typeCode": 2,
+      "type": "text/x-moz-place-container",
+      "root": "bookmarksMenuFolder",
+      "children": [
+        {
+          "guid": "HFg1eap1XVK4",
+          "title": "Firefox Nightly Resources",
+          "index": 0,
+          "dateAdded": 1573749792290000,
+          "lastModified": 1573749792290000,
+          "id": 7,
+          "typeCode": 2,
+          "type": "text/x-moz-place-container",
+          "children": [
+            {
+              "guid": "xsVZ1WDr6KdQ",
+              "title": "Firefox Nightly blog",
+              "index": 0,
+              "dateAdded": 1573749792290000,
+              "lastModified": 1573749792290000,
+              "id": 8,
+              "typeCode": 1,
+              "iconuri": "fake-favicon-uri:https://blog.nightly.mozilla.org/",
+              "type": "text/x-moz-place",
+              "uri": "https://blog.nightly.mozilla.org/"
+            },
+            {
+              "guid": "BDKxDVqGoj8a",
+              "title": "Mozilla Bug Tracker",
+              "index": 1,
+              "dateAdded": 1573749792290000,
+              "lastModified": 1573749792290000,
+              "id": 9,
+              "typeCode": 1,
+              "iconuri": "fake-favicon-uri:https://bugzilla.mozilla.org/",
+              "type": "text/x-moz-place",
+              "uri": "https://bugzilla.mozilla.org/",
+              "keyword": "bz",
+              "postData": null
+            },
+            {
+              "guid": "zBbXKPUEN969",
+              "title": "Mozilla Developer Network",
+              "index": 2,
+              "dateAdded": 1573749792290000,
+              "lastModified": 1573749792290000,
+              "id": 10,
+              "typeCode": 1,
+              "iconuri": "fake-favicon-uri:https://developer.mozilla.org/",
+              "type": "text/x-moz-place",
+              "uri": "https://developer.mozilla.org/",
+              "keyword": "mdn",
+              "postData": null
+            },
+            {
+              "guid": "cHED-go6lNMp",
+              "title": "Nightly Tester Tools",
+              "index": 3,
+              "dateAdded": 1573749792290000,
+              "lastModified": 1573749792290000,
+              "id": 11,
+              "typeCode": 1,
+              "iconuri": "fake-favicon-uri:https://addons.mozilla.org/en-US/firefox/addon/nightly-tester-tools/",
+              "type": "text/x-moz-place",
+              "uri": "https://addons.mozilla.org/en-US/firefox/addon/nightly-tester-tools/"
+            },
+            {
+              "guid": "-PC1pFOXjriH",
+              "title": "All your crashes",
+              "index": 4,
+              "dateAdded": 1573749792290000,
+              "lastModified": 1573749792290000,
+              "id": 12,
+              "typeCode": 1,
+              "iconuri": "fake-favicon-uri:about:crashes",
+              "type": "text/x-moz-place",
+              "uri": "about:crashes"
+            },
+            {
+              "guid": "Wl19nBHaJzkp",
+              "title": "Planet Mozilla",
+              "index": 5,
+              "dateAdded": 1573749792290000,
+              "lastModified": 1573749792290000,
+              "id": 13,
+              "typeCode": 1,
+              "iconuri": "fake-favicon-uri:https://planet.mozilla.org/",
+              "type": "text/x-moz-place",
+              "uri": "https://planet.mozilla.org/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "guid": "toolbar_____",
+      "title": "toolbar",
+      "index": 1,
+      "dateAdded": 1573749792181000,
+      "lastModified": 1573768207519000,
+      "id": 3,
+      "typeCode": 2,
+      "type": "text/x-moz-place-container",
+      "root": "toolbarFolder",
+      "children": [
+        {
+          "guid": "KyCFyOY7Fsos",
+          "title": "Get Involved",
+          "index": 0,
+          "dateAdded": 1573749792386000,
+          "lastModified": 1573749792386000,
+          "id": 14,
+          "typeCode": 1,
+          "iconuri": "fake-favicon-uri:https://www.mozilla.org/en-US/contribute/",
+          "type": "text/x-moz-place",
+          "uri": "https://www.mozilla.org/en-US/contribute/"
+        },
+        {
+          "guid": "JRgqlSuFYrB3",
+          "title": "some folder",
+          "index": 1,
+          "dateAdded": 1573768177985000,
+          "lastModified": 1573768207519000,
+          "id": 16,
+          "typeCode": 2,
+          "type": "text/x-moz-place-container",
+          "children": [
+            {
+              "guid": "ESG9NY5jITyr",
+              "title": "Wikipedia",
+              "index": 0,
+              "dateAdded": 1573768171154000,
+              "lastModified": 1573768178023000,
+              "id": 15,
+              "typeCode": 1,
+              "iconuri": "https://www.wikipedia.org/static/apple-touch/wikipedia.png",
+              "type": "text/x-moz-place",
+              "uri": "https://www.wikipedia.org/"
+            },
+            {
+              "guid": "5uGhZgQfVvbe",
+              "title": "dogs",
+              "index": 1,
+              "dateAdded": 1573768207485000,
+              "lastModified": 1573768209172000,
+              "id": 18,
+              "typeCode": 2,
+              "type": "text/x-moz-place-container",
+              "children": [
+                {
+                  "guid": "N_kt8oDqiCKu",
+                  "title": "Cat - Wikipedia",
+                  "index": 0,
+                  "dateAdded": 1573768197587000,
+                  "lastModified": 1573768207519000,
+                  "id": 17,
+                  "typeCode": 1,
+                  "type": "text/x-moz-place",
+                  "uri": "https://en.wikipedia.org/wiki/Cat"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "guid": "unfiled_____",
+      "title": "unfiled",
+      "index": 3,
+      "dateAdded": 1573749792181000,
+      "lastModified": 1573768204467000,
+      "id": 5,
+      "typeCode": 2,
+      "type": "text/x-moz-place-container",
+      "root": "unfiledBookmarksFolder"
+    },
+    {
+      "guid": "mobile______",
+      "title": "mobile",
+      "index": 4,
+      "dateAdded": 1573749792198000,
+      "lastModified": 1573749792279000,
+      "id": 6,
+      "typeCode": 2,
+      "type": "text/x-moz-place-container",
+      "root": "mobileFolder"
+    }
+  ]
+}

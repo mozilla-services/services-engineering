@@ -1,0 +1,13 @@
+{
+  "name": "services-engineering",
+  "version": "1.0.0",
+  "description": "This is a meta repo for all things related to the Services Engineering team that don't belong specifically to another repo.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mozilla-services/services-engineering.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mozilla-services/services-engineering/issues"
+  },
+  "private": true
+}
