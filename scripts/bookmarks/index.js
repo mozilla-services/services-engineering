@@ -1,4 +1,4 @@
-const bookmarksJson = require('./samples/bookmarks-2019-11-15.json');
+const bookmarksJson = require('./samples/default.json');
 const argv = require('yargs').argv;
 const fs = require('fs');
 
