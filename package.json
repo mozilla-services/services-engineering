@@ -9,5 +9,8 @@
   "bugs": {
     "url": "https://github.com/mozilla-services/services-engineering/issues"
   },
-  "private": true
+  "private": true,
+  "dependencies": {
+    "yargs": "^14.2.0"
+  }
 }
