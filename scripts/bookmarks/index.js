@@ -1,12 +1,10 @@
-const bookmarksJson = require('./samples/default.json');
+const bookmarksJson = require('./samples/bookmarks-2019-11-21.json');
 const argv = require('yargs').argv;
 const fs = require('fs');
 
 const fakeData = {
-  guid: 'HFg2eqp1XVX4',
   iconuri: 'fake-favicon-uri:https://planet.mozilla.org/',
   keyword: 'mdn',
-  timestamp: 1573830170,
   title: 'topSecret',
   uri: 'https://hacks.mozilla.org/',
 };
@@ -33,7 +31,7 @@ class BookmarkHelper {
           console.error(err);
           return;
         };
-        console.log("Your bookmarks have been anonymized 😎");
+        console.log("Your bookmarks have been anonymized 😎. All favicons, keywords, titles, and uris have been replaced.");
       });
     }
 
@@ -57,9 +55,6 @@ class BookmarkHelper {
     if (this.anonymize) {
       folder = {
         ...folder,
-        dateAdded: fakeData.timestamp,
-        guid: fakeData.guid,
-        lastModified: fakeData.timestamp,
         title: fakeData.title,
       }
     }
@@ -71,11 +66,8 @@ class BookmarkHelper {
     if (this.anonymize) {
       bookmark = {
         ...bookmark,
-        dateAdded: fakeData.timestamp,
-        guid: fakeData.guid,
         iconuri: fakeData.iconuri,
         keyword: fakeData.keyword,
-        lastModified: fakeData.timestamp,
         title: fakeData.title,
         uri: fakeData.uri,
       }
