@@ -10,5 +10,6 @@ This is a meta repo for all things related to the Services Engineering team that
 
 ## Where else to find us:
 
+* [chat.mozilla.org - #services](https://chat.mozilla.org/#/room/#services:mozilla.org)
 * [Slack - #services-engineering](https://app.slack.com/client/T027LFU12/CK6MA5133)
 * [Mana](https://mana.mozilla.org/wiki/pages/viewpage.action?spaceKey=SE&title=Services+Engineering)
