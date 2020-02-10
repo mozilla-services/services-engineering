@@ -21,7 +21,7 @@ class BookmarkHelper {
     this.folderCount = 0;
     this.bookmarkCount = 0;
     this.collection = bookmarksJson;
-    this.anonymize = argv.anon === true;
+    this.mockData = argv.mock === true;
     this.size = this._getSize();
 
     this.collection = this._processByType(this.collection);
@@ -31,15 +31,15 @@ class BookmarkHelper {
       });
     }
 
-    if (this.anonymize) {
-      const newFileName = 'anonymized_bookmarks.json';
+    if (this.mockData) {
+      const newFileName = 'mocked_bookmarks.json';
       fs.writeFile(`./${newFileName}`, JSON.stringify(this.collection), (err) => {
         if (err) {
           console.error(err);
           return;
         };
         this.size = this._getSize(path.resolve(process.cwd(), `${newFileName}`));
-        console.log(`Your bookmarks have been anonymized 😎. See ${newFileName}.`);
+        console.log(`Your bookmarks have been replaced with sample values 😎. All urls, titles, keywords, and icon uris have been replaced. See ${newFileName}.`);
       });
     }
   }

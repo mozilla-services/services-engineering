@@ -1,4 +1,4 @@
 node_modules
 .DS_Store
 
-anonymized_bookmarks.json
+mocked_bookmarks.json
