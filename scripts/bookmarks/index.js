@@ -1,11 +1,18 @@
-const bookmarksJson = require('./samples/default.json');
+const path = require('path');
+const filesize = require('filesize');
+const defaultFilepath = path.resolve(__dirname, 'samples/default.json');
+const bookmarksJson = require(defaultFilepath);
 const argv = require('yargs').argv;
 const fs = require('fs');
+
 
 const fakeData = {
   iconuri: 'fake-favicon-uri:https://planet.mozilla.org/',
   keyword: 'mdn',
-  title: 'topSecret',
+  titles: {
+    folder: 'topSecretFolder',
+    bookmark: 'someBookmark'
+  },
   uri: 'https://hacks.mozilla.org/',
 };
 
@@ -14,10 +21,9 @@ class BookmarkHelper {
     this.folderCount = 0;
     this.bookmarkCount = 0;
     this.collection = bookmarksJson;
-    this.anonymize = argv.anon === true;
-  }
+    this.mockData = argv.mock === true;
+    this.size = this._getSize();
 
-  init() {
     this.collection = this._processByType(this.collection);
     if (this.collection.children) {
       this.collection.children = this.collection.children.map((item) => {
@@ -25,19 +31,16 @@ class BookmarkHelper {
       });
     }
 
-    if (this.anonymize) {
-      fs.writeFile("./anonymized_bookmarks.json", JSON.stringify(this.collection), (err) => {
+    if (this.mockData) {
+      const newFileName = 'mocked_bookmarks.json';
+      fs.writeFile(`./${newFileName}`, JSON.stringify(this.collection), (err) => {
         if (err) {
           console.error(err);
           return;
         };
-        console.log("Your bookmarks have been anonymized 😎. All favicons, keywords, titles, and uris have been replaced.");
+        this.size = this._getSize(path.resolve(process.cwd(), `${newFileName}`));
+        console.log(`Your bookmarks have been replaced with sample values 😎. All urls, titles, keywords, and icon uris have been replaced. See ${newFileName}.`);
       });
-    }
-
-    return {
-      folderCount: this.folderCount,
-      bookmarkCount: this.bookmarkCount
     }
   }
 
@@ -55,7 +58,7 @@ class BookmarkHelper {
     if (this.anonymize) {
       folder = {
         ...folder,
-        title: fakeData.title,
+        title: `${fakeData.titles.folder} ${this.folderCount}`,
       }
     }
     return folder;
@@ -68,7 +71,7 @@ class BookmarkHelper {
         ...bookmark,
         iconuri: fakeData.iconuri,
         keyword: fakeData.keyword,
-        title: fakeData.title,
+        title: `${fakeData.titles.bookmark} ${this.bookmarkCount}`,
         uri: fakeData.uri,
       }
     }
@@ -85,7 +88,16 @@ class BookmarkHelper {
     });
     return item;
   }
+
+  _getSize(filepath = defaultFilepath) {
+    const {
+      size
+    } = fs.statSync(filepath);
+    return filesize(size);
+  }
 }
 
 const bookmarkHelper = new BookmarkHelper(bookmarksJson);
-console.log(bookmarkHelper.init());
+console.log('bookmarks:', bookmarkHelper.bookmarkCount);
+console.log('folders:', bookmarkHelper.folderCount);
+console.log('dataset size:', bookmarkHelper.size);
