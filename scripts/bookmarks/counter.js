@@ -34,7 +34,7 @@ class BookmarkCounter {
           this.size = this._getSize(
             path.resolve(process.cwd(), `${newFileName}`),
           );
-          console.log(
+          console.info(
             `Your bookmarks have been replaced with sample values 😎. All urls, titles, keywords, and icon uris have been replaced. See ${newFileName}.`,
           );
         },
@@ -43,7 +43,6 @@ class BookmarkCounter {
   }
 
   _processByType(item) {
-    console.log(item);
     if (item.typeCode === 1) {
       item = this.__processBookmark(item);
     } else if (item.typeCode === 2) {
