@@ -1,15 +1,22 @@
 # Bookmark Helper Scripts
 
-Count and mock bookmarks for your Firefox accounts, to help with debugging bookmark related issues.
+Count and/or generate bookmarks for your Firefox accounts, to help with debugging bookmark related issues.
 
 ## Usage
 
 - Make sure you have [node](https://nodejs.org/en/) installed.
 - $ `npm i` - install dependencies.
+
+### Counting
 - [Export](https://support.mozilla.org/en-US/kb/restore-bookmarks-from-backup-or-move-them) your Firefox bookmarks as JSON.
 - Then replace the [bookmarks/samples/default.json](https://github.com/mozilla-services/services-engineering/blob/task/add-bookmark-debugging-script/scripts/bookmarks/samples/default.json) file with your bookmarks.
 - \$ `node scripts/bookmarks/` - this will give you details around dataset size and bookmark + folder counts.
 - \$ `node scripts/bookmarks/ --mock` - this will give dataset size info, bookmark + folder counts AND create an fresh copy for you to use called `mocked_bookmarks.json` which will replace your data with example data. Note: some folders and bookmarks are hidden so while you will note each new mock folder + bookmark is given a unique numeric suffix, you might be missing a few of them if you import into the browser. This is expected.
+
+### Generating
+- \$ `node scripts/bookmarks/ -g` - This will default to generating a JSON file with 10k bookmarks (which is roughly 3MB pre-encryption).
+  - If you want, you can pass a `--count` flag, to generate a specific number of bookmarks. For example, `$ node scripts/bookmarks/ -g --count=500` to generate 500 bookmarks.
+- Now, [import](https://support.mozilla.org/en-US/kb/restore-bookmarks-from-backup-or-move-them) your generated bookmarks as JSON.
 
 ## About Dataset Sizes
 

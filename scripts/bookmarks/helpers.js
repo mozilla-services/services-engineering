@@ -1,0 +1,78 @@
+const FAKE_BOOKMARK = {
+  guid: 'eLyxfFGtF3Bw',
+  title: 'fakeBookmark',
+  index: 4,
+  dateAdded: 1561746892998000,
+  lastModified: 1572989608753000,
+  id: 12,
+  typeCode: 1,
+  type: 'text/x-moz-place',
+  uri: 'https://hacks.mozilla.org/',
+  keyword: 'mdn',
+  postData: null,
+  iconuri: 'fake-favicon-uri:https://planet.mozilla.org/',
+};
+
+const EMPTY_BOOKMARK_COLLECTION = {
+  guid: 'root________',
+  title: '',
+  index: 0,
+  dateAdded: 1573749792181000,
+  lastModified: 1573768207519000,
+  id: 1,
+  typeCode: 2,
+  type: 'text/x-moz-place-container',
+  root: 'placesRoot',
+  children: [
+    {
+      guid: 'menu________',
+      title: 'menu',
+      index: 0,
+      dateAdded: 1573749792181000,
+      lastModified: 1573749792290000,
+      id: 2,
+      typeCode: 2,
+      type: 'text/x-moz-place-container',
+      root: 'bookmarksMenuFolder',
+      children: [
+      ],
+    },
+    {
+      guid: 'toolbar_____',
+      title: 'toolbar',
+      index: 1,
+      dateAdded: 1573749792181000,
+      lastModified: 1573768207519000,
+      id: 3,
+      typeCode: 2,
+      type: 'text/x-moz-place-container',
+      root: 'toolbarFolder',
+      children: [
+      ],
+    },
+    {
+      guid: 'unfiled_____',
+      title: 'unfiled',
+      index: 3,
+      dateAdded: 1573749792181000,
+      lastModified: 1573768204467000,
+      id: 5,
+      typeCode: 2,
+      type: 'text/x-moz-place-container',
+      root: 'unfiledBookmarksFolder',
+    },
+    {
+      guid: 'mobile______',
+      title: 'mobile',
+      index: 4,
+      dateAdded: 1573749792198000,
+      lastModified: 1573749792279000,
+      id: 6,
+      typeCode: 2,
+      type: 'text/x-moz-place-container',
+      root: 'mobileFolder',
+    },
+  ],
+};
+module.exports.FAKE_BOOKMARK = FAKE_BOOKMARK;
+module.exports.EMPTY_BOOKMARK_COLLECTION = EMPTY_BOOKMARK_COLLECTION;
